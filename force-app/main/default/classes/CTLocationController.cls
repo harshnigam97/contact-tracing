@@ -37,6 +37,7 @@ public with sharing class CTLocationController {
 
     public static void updateRedScore(Set<Id> locationIds)
     {
+        
         Map<Id, Location__c> locationToBeUpdated = new Map<Id, Location__c>();
         AggregateResult[] redPeoplePerLocation=[SELECT Location__c, COUNT(Id) total
             FROM Location_Tracing__c
